@@ -1,3 +1,6 @@
+export const runtime = "nodejs";
+
+
 import { convertToCoreMessages, Message, streamText, tool } from "ai";
 import { z } from "zod";
 
