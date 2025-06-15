@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+  experimental: {
+    serverComponentsExternalPackages: ["@babel/runtime"], // optional
   },
+  // 🔥 Force Node.js runtime instead of Edge
+  output: "standalone",
 };
 
 module.exports = nextConfig;
